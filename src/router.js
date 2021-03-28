@@ -1,8 +1,10 @@
 import Router from 'vue-router'
 
 import Home from '@/views/Home.vue'
-import Blank from '@/views/Blank.vue'
-import Overview from '@/views/Overview.vue'
+import AboutUs from '@/views/AboutUs.vue'
+import PlatformService from '@/views/PlatformService.vue'
+import JoinUs from '@/views/JoinUs.vue'
+import ContactUs from '@/views/ContactUs.vue'
 
 export default new Router({
   mode: 'history',
@@ -12,13 +14,20 @@ export default new Router({
     name: 'home',
     component: Home
   }, {
-    path: '/blank',
-    name: 'blank',
-    component: Blank
+    path: '/AboutUs',
+    name: 'AboutUs',
+    component: AboutUs
   }, {
-    path: '/overview',
-    name: 'overview',
-    component: Overview
-  } 
-]
+    path: '/PlatformService',
+    name: 'PlatformService',
+    component: PlatformService
+  }, {
+    path: '/JoinUs',
+    name: 'JoinUs',
+    component: JoinUs
+  }, {
+    path: '/ContactUs',
+    name: 'ContactUs',
+    component: ContactUs
+  }]
 })

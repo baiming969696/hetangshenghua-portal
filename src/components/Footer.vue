@@ -1,36 +1,13 @@
-<i18n>
-en:
-  phone: 010-80767807, 400-680-3200
-  email: service@syngen.tech
-  address: Region 7, Building 8, No. 20 Life Science Park Road, Huilongguan, Changping District, Beijing
-  copyright: >
-    All rights reserved © Beijing Syngentech Co., LTD. ·
-    <a href="http://beian.miit.gov.cn" target="_blank">京ICP备14043945号-1</a>
-zh:
-  phone: 010-80767807, 400-680-3200
-  email: service@syngen.tech
-  address: 北京市昌平区回龙观镇生命园路20号院8幢7号区域
-  copyright: >
-    版权所有 © 北京合生基因科技有限公司 ·
-    <a href="http://beian.miit.gov.cn" target="_blank">京ICP备14043945号-1</a>
-</i18n>
-
 <template>
   <div :class="['footer', mode]">
     <div class="content">
       <hr v-if="mode === 'default'">
-      <div>
-        <span class="el-icon-guide" />
-        <a href="#" @click="setLocale('zh')">简体中文</a>
-        <span>|</span>
-        <a href="#" @click="setLocale('en')">English</a>
-      </div>
       <div v-if="mode === 'default'">
-        <span class="el-icon-phone-outline"> {{ $t('phone') }}</span>
-        <span class="el-icon-message"> {{ $t('email') }}</span>
-        <span class="el-icon-place"> {{ $t('address') }}</span>
+        <span class="el-icon-phone-outline">15600638856</span>
+        <span class="el-icon-message">s.tan@chtic.cn</span>
+        <span class="el-icon-place">北京市昌平区医科路9号院1号楼</span>
       </div>
-      <div v-html="$t('copyright')"></div>
+      <div v-html="message"></div>
     </div>
   </div>
 </template>
@@ -38,9 +15,14 @@ zh:
 <script>
 export default {
   props: ['index'],
+  data () {
+    return {
+      message: '版权所有 © 北京荷塘生华医药科技有限公司 <a href="http://beian.miit.gov.cn" target="_blank">京ICP备-------</a>'
+    }
+  },
   computed: {
     mode () {
-      return this.index === 'home' || this.index === 'blank' ? 'simple' : 'default'
+      return this.index === 'Home' || this.index === 'blank' ? 'simple' : 'default'
     }
   },
   methods: {

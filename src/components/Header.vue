@@ -10,26 +10,10 @@
         :text-color="textColor" :active-text-color="activeTextColor"
         menu-trigger="click" unique-opened router
       >
-        <!-- <el-menu-item index="home">{{ $t('nav.home') }}</el-menu-item> -->
-        <el-submenu index="about" :popper-class="mode">
-          <template slot="title">{{ $t('nav.about' )}}</template>
-          <el-menu-item index="overview">{{ $t('nav.overview') }}</el-menu-item>
-          <el-menu-item index="teammates">{{ $t('nav.teammates') }}</el-menu-item>
-          <el-menu-item index="investors">{{ $t('nav.investors') }}</el-menu-item>
-          <el-menu-item index="awards">{{ $t('nav.awards') }}</el-menu-item>
-          <el-menu-item index="contact">{{ $t('nav.contact') }}</el-menu-item>
-        </el-submenu>
-        <el-menu-item index="news">{{ $t('nav.news') }}</el-menu-item>
-        <el-submenu index="biopharma" :popper-class="mode">
-          <template slot="title">{{ $t('nav.biopharma' )}}</template>
-          <el-menu-item index="synbio">{{ $t('nav.synbio') }}</el-menu-item>
-          <el-menu-item index="science">{{ $t('nav.science') }}</el-menu-item>
-        </el-submenu>
-        <el-menu-item index="pipeline">{{ $t('nav.pipeline') }}</el-menu-item>
-        <!-- <el-menu-item index="clinical">{{ $t('nav.clinical') }}</el-menu-item> -->
-        <el-menu-item index="service">
-          <a href="/service">{{ $t('nav.service') }}</a>
-        </el-menu-item>
+        <el-menu-item index="AboutUs">{{ $t('nav.about_us') }}</el-menu-item>
+        <el-menu-item index="PlatformService">{{ $t('nav.platform_service') }}</el-menu-item>
+        <el-menu-item index="JoinUs">{{ $t('nav.join_us') }}</el-menu-item>
+        <el-menu-item index="ContactUs">{{ $t('nav.contact_us') }}</el-menu-item>
       </el-menu-wrapper>
     </div>
   </div>
@@ -46,8 +30,8 @@ export default {
     },
     logoStyle () {
       return { backgroundImage: 'url(' + ({
-        dark: require('@/assets/logo-h-white.svg'),
-        light: require('@/assets/logo-h.svg')
+        dark: require('@/assets/logo-homepage.jpeg'),
+        light: require('@/assets/header-logo.png')
       })[this.mode] + ')' }
     },
     textColor () {
@@ -122,8 +106,8 @@ export default {
     background-repeat: no-repeat;
 
     @include for-desktop-up {
-      height: 40px;
-      width: 166px;
+      height: 50px;
+      width: 200px;
     }
   }
 

@@ -1,21 +1,13 @@
-<i18n>
-en:
-  _title: "Exploring the Power of Life"
-  subtitle: 'Enabling Biomedical Innovation with Synthetic Biological Technology'
-zh:
-  _title: '探索生命的力量'
-  subtitle: '用合成生物学技术赋能生物医药创新'
-</i18n>
-
 <template>
   <div id="home">
     <video id="home-video" muted loop :poster="video.poster">
+      <source :src="video.webm" type="video/webm">
       <source :src="video.mp4" type="video/mp4">
     </video>
 
     <div class="dimmer">
-      <div class="title">{{ $t('_title') }}</div>
-      <div class="subtitle">{{ $t('subtitle') }}</div>
+      <div class="title">创新技术赋能生物工业</div>
+      <div class="subtitle">清华工研院细胞与基因治疗创新中心</div>
     </div>
   </div>
 </template>
@@ -26,7 +18,7 @@ export default {
   data () {
     return {
       video: {
-        poster: require('@/assets/curiosity.jpg'),
+        poster: require('@/assets/curiosity.png'),
         webm: require('@/assets/curiosity.webm'),
         mp4: require('@/assets/curiosity.mp4')
       }
@@ -34,7 +26,7 @@ export default {
   },
   computed: {
     title () {
-      return this.$t('title') + ' | ' + this.$t('_title')
+      return '荷塘生华'
     }
   },
   created () {

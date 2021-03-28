@@ -32,7 +32,7 @@ export default {
 
 html {
   font-size: 0.9em;
-  @include for-desktop-up { font-size: 1em; }
+  @include for-desktop-up { font-size: 1.2em; }
 }
 
 body {

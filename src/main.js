@@ -17,55 +17,14 @@ Vue.use(Element, { i18n: (key, value) => i18n.t(key, value) })
 const i18n = new I18n({
   locale: /^zh/.test(navigator.language || navigator.userLanguage) ? 'zh' : 'en',
   messages: {
-    en: {
-      title: 'SyngenTech',
-      nav: {
-        home: 'Home',
-        //
-        about: 'Our Company',
-        overview: 'Overview',
-        teammates: 'Our Team',
-        investors: 'Our Investors',
-        awards: 'Our Awards',
-        contact: 'Contact Us',
-        //
-        news: 'Newsroom',
-        //
-        biopharma: 'Science',
-        synbio: 'Synthetic Biology',
-        science: 'Our Science',
-        //
-        pipeline: 'Pipeline',
-        //
-        clinical: 'Clinical Trials',
-        //
-        service: 'Services'
-      },
-      ...elementLocaleEn
-    },
     zh: {
-      title: '合生基因',
+      title: '荷塘生华',
       nav: {
         home: '首页',
-        //
-        about: '关于',
-        overview: '公司简介',
-        teammates: '领导团队',
-        investors: '融资情况',
-        awards: '荣誉资质',
-        contact: '联系我们',
-        //
-        news: '新闻资讯',
-        //
-        biopharma: '科学与研发',
-        synbio: '合成生物学',
-        science: '药物研发',
-        //
-        pipeline: '产品管线',
-        //
-        clinical: '临床研究',
-        //
-        service: '科研服务'
+        about_us: '关于我们',
+        platform_service: '平台服务',
+        join_us: '加入我们',
+        contact_us: '联系我们'
       },
       ...elementLocaleZh
     }
