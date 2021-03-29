@@ -22,6 +22,13 @@
             <li>联系电话：15600638856</li>
             <li>联系邮箱：s.tan@cgtic.cn</li>
         </ul>
+        <baidu-map class="bm-view" :center="center" :zoom="zoom" @ready="handler">
+            <bm-scale anchor="BMAP_ANCHOR_TOP_RIGHT"></bm-scale>
+            <bm-navigation anchor="BMAP_ANCHOR_TOP_RIGHT"></bm-navigation>
+            <bm-marker :position="center" :dragging="true">
+                <bm-label content="荷塘生华" :labelStyle="{color: 'red', fontSize : '12px'}" :offset="{width: -20, height: 30}"/>
+            </bm-marker>
+        </baidu-map>
       </template>
 
     </div>
@@ -35,7 +42,9 @@ export default {
     return {
       banner: require('@/assets/banner-3.jpg'),
       contact_us_1: require('@/assets/contact_us_1.jpg'),
-      contact_us_2: require('@/assets/contact_us_2.jpg')
+      contact_us_2: require('@/assets/contact_us_2.jpg'),
+      center: { lng: 0, lat: 0 },
+      zoom: 3
     }
   },
   computed: {
@@ -51,6 +60,14 @@ export default {
     '$i18n.locale' () {
       document.title = this.title
     }
+  },
+  methods: {
+    handler ({ BMap, map }) {
+      console.log(BMap, map)
+      this.center.lng = 116.278261
+      this.center.lat = 40.110199
+      this.zoom = 15
+    }
   }
 }
 </script>
@@ -58,5 +75,10 @@ export default {
 <style lang="scss">
     el-image {
         display: inline;
+    }
+
+    .bm-view {
+        width: 100%;
+        height: 300px
     }
 </style>
