@@ -4,7 +4,7 @@
       <hr v-if="mode === 'default'">
       <div v-if="mode === 'default'">
         <span class="el-icon-phone-outline">15600638856</span>
-        <span class="el-icon-message">s.tan@chtic.cn</span>
+        <span class="el-icon-message">s.tan@cgtic.cn</span>
         <span class="el-icon-place">北京市昌平区医科路9号院1号楼</span>
       </div>
       <div v-html="message"></div>

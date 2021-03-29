@@ -20,7 +20,7 @@
         <ul>
             <li>联系地址：北京市昌平区医科路9号院1号楼</li>
             <li>联系电话：15600638856</li>
-            <li>联系邮箱：s.tan@chtic.cn</li>
+            <li>联系邮箱：s.tan@cgtic.cn</li>
         </ul>
       </template>
 
