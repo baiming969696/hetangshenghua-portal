@@ -92,4 +92,8 @@ body {
     text-indent: 2em;
   }
 }
+
+p {
+  text-indent: 2em;
+}
 </style>

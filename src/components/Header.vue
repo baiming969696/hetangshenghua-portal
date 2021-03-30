@@ -2,7 +2,8 @@
   <div :class="['header', mode]">
     <div class="content">
       <router-link to="/">
-        <div class="logo" :style="logoStyle"></div>
+        <div v-if="mode == 'dark'" class="logo-dark" :style="logoStyle"></div>
+        <div v-if="mode == 'light'" class="logo-light" :style="logoStyle"></div>
       </router-link>
 
       <el-menu-wrapper
@@ -96,7 +97,7 @@ export default {
 
   &.dark .content { max-width: inherit; }
 
-  .logo {
+  .logo-dark {
     height: 2rem;
     width: 2rem;
     cursor: pointer;
@@ -106,8 +107,23 @@ export default {
     background-repeat: no-repeat;
 
     @include for-desktop-up {
-      height: 60px;
-      width: 300px;
+      height: 45px;
+      width: 166px;
+    }
+  }
+
+  .logo-light {
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+
+    @include for-desktop-up {
+      height: 45px;
+      width: 225px;
     }
   }
 
