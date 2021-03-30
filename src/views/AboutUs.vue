@@ -1,5 +1,5 @@
 <template>
-  <div id="overview" class="page">
+  <div id="AboutUs" class="page">
     <el-image :src="banner" fit="cover"></el-image>
 
     <div :class="['content', $i18n.locale]">
@@ -24,10 +24,10 @@
 
 <script>
 export default {
-  name: 'overview',
+  name: 'AboutUs',
   data () {
     return {
-      banner: require('@/assets/banner-3.jpg'),
+      banner: require('@/assets/banner-3.png'),
       about_us: require('@/assets/about_us.png')
     }
   },
@@ -38,7 +38,7 @@ export default {
   },
   created () {
     document.title = this.title
-    this.$emit('nav-index', 'overview')
+    this.$emit('nav-index', 'AboutUs')
   },
   watch: {
     '$i18n.locale' () {

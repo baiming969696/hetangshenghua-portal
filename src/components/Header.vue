@@ -107,7 +107,7 @@ export default {
 
     @include for-desktop-up {
       height: 50px;
-      width: 200px;
+      width: 280px;
     }
   }
 

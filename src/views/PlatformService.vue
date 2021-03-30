@@ -1,5 +1,5 @@
 <template>
-  <div id="overview" class="page">
+  <div id="PlatformService" class="page">
     <el-image :src="banner" fit="cover"></el-image>
 
     <div :class="['content', $i18n.locale]">
@@ -20,17 +20,17 @@
             <li>细胞与基因治疗产品洁净物流与管理服务</li>
         </ul>
       </template>
-
+      <el-image :src="require('@/assets/platform_service.png')" fit="cover"></el-image>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'platform_service',
+  name: 'PlatformService',
   data () {
     return {
-      banner: require('@/assets/banner-3.jpg')
+      banner: require('@/assets/banner-3.png')
     }
   },
   computed: {
@@ -40,7 +40,7 @@ export default {
   },
   created () {
     document.title = this.title
-    this.$emit('nav-index', 'platform_service')
+    this.$emit('nav-index', 'PlatformService')
   },
   watch: {
     '$i18n.locale' () {

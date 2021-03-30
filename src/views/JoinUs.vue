@@ -1,5 +1,5 @@
 <template>
-  <div id="overview" class="page">
+  <div id="JoinUs" class="page">
     <el-image :src="banner" fit="cover"></el-image>
 
     <div :class="['content', $i18n.locale]">
@@ -22,17 +22,17 @@
         <p>电话：18515296956</p>
         <p>邮箱：z.liang@cgtic.cn</p>
       </template>
-
+      <el-image :src="require('@/assets/join_us.png')" fit="cover"></el-image>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'join_us',
+  name: 'JoinUs',
   data () {
     return {
-      banner: require('@/assets/banner-3.jpg')
+      banner: require('@/assets/banner-3.png')
     }
   },
   computed: {
@@ -42,7 +42,7 @@ export default {
   },
   created () {
     document.title = this.title
-    this.$emit('nav-index', 'join_us')
+    this.$emit('nav-index', 'JoinUs')
   },
   watch: {
     '$i18n.locale' () {
