@@ -106,8 +106,8 @@ export default {
     background-repeat: no-repeat;
 
     @include for-desktop-up {
-      height: 50px;
-      width: 280px;
+      height: 60px;
+      width: 300px;
     }
   }
 
