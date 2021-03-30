@@ -2,10 +2,10 @@
   <div id="JoinUs" class="page">
     <el-image :src="banner" fit="cover"></el-image>
 
-    <div :class="['content', $i18n.locale]">
-      <h1>{{ $t('nav.join_us') }}</h1>
+    <div :class="['content']">
+      <h1>加入我们</h1>
 
-      <template v-if="$i18n.locale === 'zh'">
+      <template>
         <p>荷塘生华致力于以：认知世界、敬畏生命、试错前行、创造未来的核心价值观吸引来自全球的顶级研发、生产、工程、质量、信息、自动化、高通量和商务人才，打造面向生物工业特别是细胞与基因治疗领域的专业化人才队伍，期待为中国细胞与基因治疗产业发展贡献一份力量。</p>
         <p>荷塘生华以下领域面向全球招募高级管理人才和工程师：</p>
         <ul>
@@ -37,17 +37,12 @@ export default {
   },
   computed: {
     title () {
-      return this.$t('nav.join_us') + ' | ' + this.$t('title')
+      return '加入我们 ｜ 荷塘生华'
     }
   },
   created () {
     document.title = this.title
     this.$emit('nav-index', 'JoinUs')
-  },
-  watch: {
-    '$i18n.locale' () {
-      document.title = this.title
-    }
   }
 }
 </script>

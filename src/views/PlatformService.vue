@@ -2,10 +2,10 @@
   <div id="PlatformService" class="page">
     <el-image :src="banner" fit="cover"></el-image>
 
-    <div :class="['content', $i18n.locale]">
-      <h1>{{ $t('nav.platform_service') }}</h1>
+    <div :class="['content']">
+      <h1>平台服务</h1>
 
-      <template v-if="$i18n.locale === 'zh'">
+      <template>
 
         <p>CGTIC拥有一支来自全球产业领域的顶尖专家和资深顾问专家可协同为全球客户提供从企业孵化、生产技术研发、生产外包服务、质量控制、药物申报与转化等全方位的创新服务。</p>
         <p>CGTIC建设了3000平米的创新孵化空间和7000平米的符合中美欧GMP要求的DNA、病毒、细胞生产设施设备。CGTIC旨在提供从临床前到临床阶段的CGT创新药物的研发和中试生产服务。CGTIC将提供质粒、 腺相关病毒(AAV)、慢病毒(LV)、腺病毒(AD)和逆转录病毒生产及其灌装服务，主要用于神经科学、肿瘤、代谢和心血管疾病的实验、临床前和临床研究。建成包括高通量反应器、多条200L采用一次反应工艺的病毒生产平台和高速全自动制剂平台。同时，CGTIC将为客户提供模块化B级细胞治疗GMP车间。</p>
@@ -35,17 +35,12 @@ export default {
   },
   computed: {
     title () {
-      return this.$t('nav.platform_service') + ' | ' + this.$t('title')
+      return '平台服务 ｜ 荷塘生华'
     }
   },
   created () {
     document.title = this.title
     this.$emit('nav-index', 'PlatformService')
-  },
-  watch: {
-    '$i18n.locale' () {
-      document.title = this.title
-    }
   }
 }
 </script>

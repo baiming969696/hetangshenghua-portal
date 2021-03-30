@@ -2,10 +2,10 @@
   <div id="ContactUs" class="page">
     <el-image :src="banner" fit="cover"></el-image>
 
-    <div :class="['content', $i18n.locale]">
-      <h1>{{ $t('nav.contact_us') }}</h1>
+    <div :class="['content']">
+      <h1>联系我们</h1>
 
-      <template v-if="$i18n.locale === 'zh'">
+      <template>
         <p>荷塘生华位于中国生命科技创新高地-中关村生命科学园，处在中国(北京)自由贸易试验区科技创新区内，具备生命科学技术创新产业发展得天独厚的区位优势和国际商贸合作优势。</p>
         <ul>
             <li>5min交通可到达北京生命科学研究所和北京大学国际医院。</li>
@@ -45,17 +45,12 @@ export default {
   },
   computed: {
     title () {
-      return this.$t('nav.contact_us') + ' | ' + this.$t('title')
+      return '联系我们 ｜ 荷塘生华'
     }
   },
   created () {
     document.title = this.title
     this.$emit('nav-index', 'ContactUs')
-  },
-  watch: {
-    '$i18n.locale' () {
-      document.title = this.title
-    }
   },
   methods: {
     handler ({ BMap, map }) {
