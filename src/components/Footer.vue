@@ -22,7 +22,7 @@ export default {
   },
   computed: {
     mode () {
-      return this.index === 'Home' || this.index === 'blank' ? 'simple' : 'default'
+      return this.index === 'home' || this.index === 'blank' ? 'simple' : 'default'
     }
   },
   methods: {
