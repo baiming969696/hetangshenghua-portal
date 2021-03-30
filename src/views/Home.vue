@@ -1,7 +1,7 @@
 <template>
   <div id="home">
     <video id="home-video" muted loop :poster="video.poster">
-      <source :src="video.webm" type="video/webm">
+      <source :src="video.mp4" type="video/mp4">
     </video>
 
     <div class="dimmer">
@@ -18,7 +18,7 @@ export default {
     return {
       video: {
         poster: require('@/assets/curiosity.png'),
-        webm: require('@/assets/curiosity.webm')
+        mp4: require('@/assets/curiosity.mp4')
       }
     }
   },
