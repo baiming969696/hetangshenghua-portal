@@ -17,7 +17,7 @@ export default {
   props: ['index'],
   data () {
     return {
-      message: '版权所有 © 北京荷塘生华医药科技有限公司 <a href="http://beian.miit.gov.cn" target="_blank">京ICP备2021009103号-1</a>'
+      message: '版权所有 © 北京荷塘生华医疗科技有限公司 <a href="http://beian.miit.gov.cn" target="_blank">京ICP备2021009103号-1</a>'
     }
   },
   computed: {

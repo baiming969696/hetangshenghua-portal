@@ -10,10 +10,10 @@
         :text-color="textColor" :active-text-color="activeTextColor"
         menu-trigger="click" unique-opened router
       >
-        <el-menu-item index="AboutUs">{{ $t('nav.about_us') }}</el-menu-item>
-        <el-menu-item index="PlatformService">{{ $t('nav.platform_service') }}</el-menu-item>
-        <el-menu-item index="JoinUs">{{ $t('nav.join_us') }}</el-menu-item>
-        <el-menu-item index="ContactUs">{{ $t('nav.contact_us') }}</el-menu-item>
+        <el-menu-item index="AboutUs">关于我们</el-menu-item>
+        <el-menu-item index="PlatformService">平台服务</el-menu-item>
+        <el-menu-item index="JoinUs">加入我们</el-menu-item>
+        <el-menu-item index="ContactUs">联系我们</el-menu-item>
       </el-menu-wrapper>
     </div>
   </div>

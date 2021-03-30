@@ -13,10 +13,7 @@
             <li>60min交通可到达包括中国TOP50三甲医院1/3以上。</li>
             <li>90min交通可到达4个高铁站和2个国际机场。</li>
         </ul>
-        <div class="imageBox">
-            <el-image :src="contact_us_1" style="width: 400px; padding: 10px"></el-image>
-            <el-image :src="contact_us_2" style="width: 400px; padding: 10px"></el-image>
-        </div>
+        <el-image :src="contact_us" fit="cover"></el-image>
         <ul>
             <li>联系地址：北京市昌平区医科路9号院1号楼</li>
             <li>联系电话：15600638856</li>
@@ -41,8 +38,7 @@ export default {
   data () {
     return {
       banner: require('@/assets/banner-3.png'),
-      contact_us_1: require('@/assets/contact_us_1.jpg'),
-      contact_us_2: require('@/assets/contact_us_2.jpg'),
+      contact_us: require('@/assets/contact_us.png'),
       center: { lng: 0, lat: 0 },
       zoom: 3
     }
